@@ -1,0 +1,17 @@
+.dub
+docs.json
+__dummy.html
+docs/
+lib/
+/cengiz
+cengiz.so
+cengiz.dylib
+cengiz.dll
+cengiz.a
+cengiz.lib
+cengiz-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst

@@ -1,0 +1,21 @@
+{
+	"authors": [
+		"Emir Cengiz"
+	],
+	"copyright": "Copyright © 2023, Emir Cengiz",
+	"dependencies": {
+		"bindbc-sdl": "~>1.4.1"
+	},
+	"description": "Game library",
+	"license": "proprietary",
+	"name": "cengiz",
+	"configurations": [
+		{
+			"name": "lib",
+			"targetType": "library",
+			"targetName": "cengiz",
+			"targetPath": "lib",
+			"excludedSourceFiles": ["source/cengiz/test/**"]
+		}
+	]
+}

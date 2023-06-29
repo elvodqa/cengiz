@@ -1,0 +1,55 @@
+{
+	"authors": [
+		"Emir Cengiz"
+	],
+	"buildTypes": {
+		"dg_debug": {
+			"buildOptions": [
+				"debugMode",
+				"debugInfoC",
+				"alwaysStackFrame",
+				"unittests",
+				"warnings"
+			]
+		},
+		"dg_release": {
+			"buildOptions": [
+				"releaseMode",
+				"inline",
+				"noBoundsCheck",
+				"optimize",
+				"warnings"
+			]
+		}
+	},
+	"configurations": [
+		{
+			"dflags": [
+				"-Dd../docs",
+				"-debug"
+			],
+			"importPaths": [
+				"../"
+			],
+			"name": "main",
+			"sourceFiles": [
+				"main.d"
+			],
+			"sourcePaths": [
+				"../"
+			],
+			"targetName": "cengiz-example",
+			"targetType": "executable"
+		}
+	],
+	"lflags": [
+		"-L../../../lib"
+	],
+	"copyright": "Copyright © 2023, Emir Cengiz",
+	"dependencies": {
+		"bindbc-sdl": "~>1.4.1"
+	},
+	"description": "A minimal D application.",
+	"license": "proprietary",
+	"name": "cengiz"
+}
