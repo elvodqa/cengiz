@@ -2,14 +2,14 @@ module cengiz.graphics.window;
 
 private:
 
-import std.stdio;
 import bindbc.sdl;
 import bindbc.opengl;
 
-import bindbc.imgui.bind.imgui;
-import cengiz.math.rectangle;
+import std.stdio;
 import std.string;
 
+import cengiz.math.rectangle;
+import cengiz.graphics.color;
 
 public:
 
@@ -26,8 +26,7 @@ class Window {
         this.cursor_visible = true;
 
         SDLSupport sdlStatus = loadSDL();
-        import bindbc.imgui.dynload;
-        loadImGui();
+       
         if (sdlStatus != sdlSupport)
         {
             writeln("Failed loading SDL");
@@ -133,7 +132,8 @@ class Window {
         return true;
     }
 
-    void clear() {
+    void clear(Color clear_color = Color(0, 0, 0, 255)) {
+        glClearColor(clear_color.red/255, clear_color.green/255, clear_color.blue/255, clear_color.alpha/255);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     }
     

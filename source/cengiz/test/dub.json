@@ -44,16 +44,12 @@
 	],
 	"copyright": "Copyright © 2023, Emir Cengiz",
 	"dependencies": {
-		"bindbc-imgui": "~>0.7.0",
-		"bindbc-opengl": "~>0.13.0",
+		"bindbc-opengl": "~>1.1.0",
 		"bindbc-sdl": "~>1.4.1"
 	},
 	"description": "A minimal D application.",
 	"lflags": [
 		"-L../../../lib"
-	],
-	"libs": [
-		"SDL2"
 	],
 	"license": "proprietary",
 	"name": "cengiz",
@@ -61,7 +57,6 @@
 		"GL_41",
 		"GL_ARB",
 		"GL_AllowDeprecated",
-		"SDL_2022",
-		"USE_SDL2"
+		"SDL_2022"
 	]
 }

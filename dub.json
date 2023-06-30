@@ -15,14 +15,10 @@
 	],
 	"copyright": "Copyright © 2023, Emir Cengiz",
 	"dependencies": {
-		"bindbc-imgui": "~>0.7.0",
-		"bindbc-opengl": "~>0.13.0",
+		"bindbc-opengl": "~>1.1.0",
 		"bindbc-sdl": "~>1.4.1"
 	},
 	"description": "Game library",
-	"libs": [
-		"SDL2"
-	],
 	"license": "proprietary",
 	"name": "cengiz",
 	"subConfigurations": {
@@ -31,7 +27,6 @@
 	"versions": [
 		"GL_41",
 		"GL_ARB",
-		"SDL_2022",
-		"USE_SDL2"
+		"SDL_2022"
 	]
 }
