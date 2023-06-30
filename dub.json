@@ -2,20 +2,36 @@
 	"authors": [
 		"Emir Cengiz"
 	],
+	"configurations": [
+		{
+			"excludedSourceFiles": [
+				"source/cengiz/test/**"
+			],
+			"name": "lib",
+			"targetName": "cengiz",
+			"targetPath": "lib",
+			"targetType": "library"
+		}
+	],
 	"copyright": "Copyright © 2023, Emir Cengiz",
 	"dependencies": {
+		"bindbc-imgui": "~>0.7.0",
+		"bindbc-opengl": "~>0.13.0",
 		"bindbc-sdl": "~>1.4.1"
 	},
 	"description": "Game library",
+	"libs": [
+		"SDL2"
+	],
 	"license": "proprietary",
 	"name": "cengiz",
-	"configurations": [
-		{
-			"name": "lib",
-			"targetType": "library",
-			"targetName": "cengiz",
-			"targetPath": "lib",
-			"excludedSourceFiles": ["source/cengiz/test/**"]
-		}
+	"subConfigurations": {
+		"bindbc-opengl": "dynamicBC"
+	},
+	"versions": [
+		"GL_41",
+		"GL_ARB",
+		"SDL_2022",
+		"USE_SDL2"
 	]
 }

@@ -1,7 +1,9 @@
 {
 	"fileVersion": 1,
 	"versions": {
+		"bindbc-imgui": "0.7.0",
 		"bindbc-loader": "1.1.1",
+		"bindbc-opengl": "1.1.0",
 		"bindbc-sdl": "1.4.1"
 	}
 }
