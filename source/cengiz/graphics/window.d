@@ -10,6 +10,9 @@ import std.string;
 
 import cengiz.math.rectangle;
 import cengiz.graphics.color;
+import cengiz.graphics.drawable;
+import cengiz.graphics.vertex;
+
 
 public:
 
@@ -131,16 +134,19 @@ class Window {
         }
         return true;
     }
-
-    void clear(Color clear_color = Color(0, 0, 0, 255)) {
-        glClearColor(clear_color.red/255, clear_color.green/255, clear_color.blue/255, clear_color.alpha/255);
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    }
     
     void display() {
         SDL_GL_SwapWindow(this.window);
     }
 
+    void clear(Color clear_color = Color(0, 0, 0, 255)) {
+        glClearColor(clear_color.red/255, clear_color.green/255, clear_color.blue/255, clear_color.alpha/255);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    }
+
+    void draw(Drawable drawable) {
+        drawable.draw(this);
+    }
 
     void destroy() {
         SDL_GL_DeleteContext(this.context);

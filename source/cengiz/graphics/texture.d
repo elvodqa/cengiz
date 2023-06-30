@@ -1,4 +1,4 @@
-module cengiz.graphics.texture2d;
+module cengiz.graphics.texture;
 
 private:
 
